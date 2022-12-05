@@ -33,7 +33,6 @@ local options = {
   -- Searching
   ignorecase = true,   -- case insensitive searching
   smartcase = true,    -- case-sensitive if expresson contains a capital letter
-  hlsearch = true,     -- highlight search results
   incsearch = true,    -- set incremental search, like modern browsers
   -- nolazyredraw = true, -- don't redraw while executing macros
   magic = true,        -- Set magic on, for regex
@@ -51,12 +50,11 @@ local options = {
   laststatus = 2,            -- show the status line all the time
   so = 7,                    -- set 7 lines to the cursors - when moving vertical
   wildmenu = true,           -- enhanced command line completion
+  wildmode = "full",         -- complete files like a shell
   hidden = true,             -- current buffer can be put into background
   showcmd = true,            -- show incomplete commands
   -- noshowmode = true,         -- don't show which mode disabled for PowerLine
-  wildmode = "full",         -- complete files like a shell
-  shell = "$SHELL",          -- wet which shell to use
-  cmdheight = 1,             -- command bar height
+  -- shell = "$SHELL",          -- wet which shell to use
   title = true,              -- set terminal title
   showmatch = true,          -- show matching braces
   mat = 2,                   -- how many tenths of a second to blink
@@ -84,6 +82,9 @@ local options = {
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
+
+-- Mouse
+vim.opt.mouse = nil
 
 -- Autocomplete
 vim.opt.complete:append "kspell"            -- needed for autocomplete popup

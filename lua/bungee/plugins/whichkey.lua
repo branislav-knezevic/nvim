@@ -87,8 +87,8 @@ local mappings = {
   ["q"] = { "<cmd>q<CR>", "Quit" },
   ["Q"] = { "<cmd>Bd<CR>", "Delete buffer" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
-  ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer Open" },
-  ["E"] = { "<cmd>NvimTreeFocus<cr>", "Explorer Focus" },
+  ["E"] = { "<cmd>NvimTreeToggle<cr>", "Explorer Open" },
+  ["e"] = { "<cmd>NvimTreeFocus<cr>", "Explorer Focus" },
   ["r"] = { "<cmd>source ~/.config/nvim/init.lua<CR>", "Reload config" },
   ["t"] = { "<cmd>tabnew<CR>", "Create Tab" },
   -- t = {
@@ -109,10 +109,10 @@ local mappings = {
     S = { "<cmd>PackerStatus<cr>", "Status" },
     u = { "<cmd>PackerUpdate<cr>", "Update" },
   },
-  ["["] = { "<cmd>call append(line('.')-1, '')<CR>", "Add blank line above" },
-  ["]"] = { "<cmd>call append(line('.'), '')<CR>", "Add blank line below" },
-  ["{"] = { "<cmd>m .-2<CR>==", "Move line up" },
-  ["}"] = { "<cmd>m .+1<CR>==", "Move line down" },
+  -- ["["] = { "<cmd>call append(line('.')-1, '')<CR>", "Add blank line above" },
+  -- ["]"] = { "<cmd>call append(line('.'), '')<CR>", "Add blank line below" },
+  ["["] = { "<cmd>m .-2<CR>==", "Move line up" },
+  ["]"] = { "<cmd>m .+1<CR>==", "Move line down" },
   ["a"] = { "<cmd>Alpha<cr>", "Homescreen" },
   s = {
     name = "Search",
@@ -128,10 +128,6 @@ local mappings = {
     c = { "<cmd>Telescope commands<cr>", "Commands" },
   },
   -- ["d"] 
-  -- ["f"] = {
-  --   "<cmd>lua require('telescope.builtin').find_files.get_dropdown{previewer = false}<cr>",
-  --   "Find files",
-  -- },
   ["f"] = {
     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Find files",
@@ -177,7 +173,7 @@ local mappings = {
   -- ["'"] 
   ["\\"] = { "<cmd>vsplit<CR>", "Vertical split" },
   ["-"] = { "<cmd>split<CR>", "Horizontal split" },
-  ["z"] = { "<cmd>NeoZoomToggle", "Zoom Toggle"},
+  ["z"] = { "<cmd>NeoZoomToggle<CR>", "Zoom Toggle"},
   ["x"] = { "<cmd>x<CR>", "Save and close" },
   c = {
     name = "LSP",
@@ -215,14 +211,12 @@ local mappings = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
   },
-  -- ["n"]
-  -- ["m"]
+  -- ["n"],
+  ["m"] = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
   [","] = { "<cmd>bp<CR>", "Previous Buffer" },
   ["."] = { "<C-^>", "Last buffer" },
   ["/"] = { "<cmd>nohl<CR>", "Clear search" },
-  -- ["/"]
   ["<space>"] = { "<cmd>w<CR>", "Save" },
-  -- ["<space>"] = { "<cmd>w<CR>", "Save" },
   -- ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 
 
