@@ -46,3 +46,4 @@ require("illuminate").configure {
   -- under_cursor: whether or not to illuminate under the cursor
   under_cursor = true,
 }
+

@@ -62,7 +62,8 @@ keymap('v', 'K', ':m <-2<CR>gv=gv', opts)
 -- keymap('n', '<leader>]', ':m .+1<CR>==', opts)
 
 -- when pasting in visual, keep previous clipboard
-keymap("v", "p", '"_dP', opts)
+-- keymap("v", "p", '"_dP', opts)
+keymap("v", "p", 'p:let @+=@0<CR>:let @"=@0<CR>', opts)
 
 -- Create blank line above or below
 keymap("n", "[<space>", ":call append(line('.')-1, '')<CR>", opts) -- above

@@ -35,6 +35,10 @@ telescope.setup {
     path_display = { "truncate" },
     -- path_display = { "smart" },
 
+    layout_config = {
+      vertical = { width = 0.5 }
+    },
+
     mappings = {
       i = {
         ["<C-n>"] = actions.cycle_history_next,
