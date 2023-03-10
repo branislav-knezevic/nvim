@@ -101,7 +101,7 @@ local mappings = {
   -- ["y"]
   ["u"] = { "gUiwe", "UPPERCASE" },
   ["i"] = { "guiwe", "lowercase" },
-  -- ["o"]
+  ["o"] = { "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{layout_config={width=0.5}, previewer = false})<cr>", "Open Files" },
   p = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
@@ -150,7 +150,7 @@ local mappings = {
     c = { "<cmd>G checkout<cr>", "Git checkout" },
     j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
     k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
-    P = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
+    d = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
     -- B = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
     f = { "<cmd>diffget //2<cr>", "Use left side" },
     h = { "<cmd>diffget //3<cr>", "Use right side" },

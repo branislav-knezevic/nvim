@@ -51,6 +51,13 @@ M.setup = function()
 	})
 end
 
+-- if vim.bo[bufnr].buftype ~= "" or vim.bo[bufnr].filetype == "helm" then
+--   vim.diagnostic.disable(bufnr)
+--   vim.defer_fn(function()
+--     vim.diagnostic.reset(nil, bufnr)
+--   end, 1000)
+-- end
+
 local function lsp_keymaps(bufnr)
 	local opts = { noremap = true, silent = true }
 	local keymap = vim.api.nvim_buf_set_keymap
@@ -79,6 +86,10 @@ M.on_attach = function(client, bufnr)
 	if client.name == "sumneko_lua" then
 		client.server_capabilities.documentFormattingProvider = false
 	end
+
+  if vim.bo[bufnr].buftype ~= "" or vim.bo[bufnr].filetype == "helm" then
+    vim.diagnostic.disable() 
+  end
 
 	lsp_keymaps(bufnr)
 	local status_ok, illuminate = pcall(require, "illuminate")

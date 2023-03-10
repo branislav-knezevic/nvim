@@ -93,9 +93,11 @@ return packer.startup(function(use)
   use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
   use { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" }
   use { "hashivim/vim-terraform" } -- helps with terraform syntax
+  use { "towolf/vim-helm" } -- helps with helm syntax
 
   -- Markdown
   -- use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
+  use {'plasticboy/vim-markdown' }
   use {'davidgranstrom/nvim-markdown-preview' }
 
   -- Telescope
@@ -105,6 +107,7 @@ return packer.startup(function(use)
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac", }
   use { "p00f/nvim-ts-rainbow" } -- brackets with different colors
+  use { "ngalaiko/tree-sitter-go-template" } -- for helm syntax
 
   -- Git
   use { "tpope/vim-fugitive" } -- old Vim plugin for Git
