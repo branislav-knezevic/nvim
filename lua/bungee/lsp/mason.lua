@@ -4,12 +4,12 @@ local servers = {
 	-- "html",
 	-- "tsserver",
 	-- "pyright",
+	"terraformls",
 	"bashls",
 	"jsonls",
 	"yamlls",
-	"terraformls",
-	"tflint",
-  "marksman"
+	-- "tflint",
+	"marksman",
 }
 
 local settings = {
