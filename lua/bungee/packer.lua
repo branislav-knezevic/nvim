@@ -70,7 +70,7 @@ return packer.startup(function(use)
 	use({ "nvim-lualine/lualine.nvim", commit = "a52f078026b27694d2290e34efa61a6e4a690621" }) -- status line at the bottom
 	-- use { "akinsho/bufferline.nvim", commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4" }
 
-	-- Cmp
+	-- Cmp - completions
 	use({ "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" }) -- The completion plugin
 	use({ "hrsh7th/cmp-buffer", commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa" }) -- buffer completions
 	use({ "hrsh7th/cmp-path", commit = "447c87cdd6e6d6a1d2488b1d43108bfa217f56e1" }) -- path completions
@@ -116,6 +116,7 @@ return packer.startup(function(use)
 	-- Git
 	use({ "tpope/vim-fugitive" }) -- old Vim plugin for Git
 	use({ "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" })
+	use({ "kdheepak/lazygit.nvim" }) -- lazygit
 
 	-- Apple
 	use({ "https://github.pie.apple.com/pcl/pcl-neovim.git", after = "nvim-treesitter", run = ":TSInstall! pcl" }) --pluging for Apple's pcl files
