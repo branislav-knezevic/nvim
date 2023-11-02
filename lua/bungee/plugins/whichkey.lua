@@ -177,8 +177,8 @@ local mappings = {
 	["j"] = { "<c-w>j", "Window down" },
 	["k"] = { "<c-w>k", "Window up" },
 	["l"] = { "<c-w>l", "Window right" },
-	[";"] = { "<cmd>bn<cr>", "Buffer next" },
-	-- ["'"]
+	[";"] = { "<C-^>", "Last buffer" },
+	["'"] = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
 	["\\"] = { "<cmd>vsplit<CR>", "Vertical split" },
 	["-"] = { "<cmd>split<CR>", "Horizontal split" },
 	["z"] = { "<cmd>NeoZoomToggle<CR>", "Zoom Toggle" },
@@ -215,18 +215,17 @@ local mappings = {
 		},
 	},
 	["v"] = { "v$h", "Select till end" },
-	["b"] = {
-		"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{layout_config={width=0.5}, previewer = false})<cr>",
-		"Buffers",
-	},
+	-- ["b"] = {},
 	["n"] = { "<Cmd>lua require'shade'.toggle()<CR>", "Toggle shade" },
-	-- ["m"] = { "<Cmd>Lazygit<CR", "Lazygit" },
-	["m"] = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
+	["m"] = {
+		"<cmd>lua require('telescope.builtin').git_status(require('telescope.themes').get_dropdown{layout_config={width=0.5}, previewer = false})<cr>",
+		"Edited files",
+	},
+	["M"] = { "<cmd>Telescope git_status<cr>", "Open changed file" },
 	[","] = { "<cmd>bp<CR>", "Previous Buffer" },
-	["."] = { "<C-^>", "Last buffer" },
+	["."] = { "<cmd>bn<cr>", "Buffer next" },
 	["/"] = { "<cmd>nohl<CR>", "Clear search" },
 	["<space>"] = { "<cmd>w<CR>", "Save" },
-	-- ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 
 	-- t = {
 	--   name = "Terminal",
