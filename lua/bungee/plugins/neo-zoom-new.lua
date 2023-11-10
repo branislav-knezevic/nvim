@@ -19,14 +19,14 @@ neozoom.setup({
 	winopts = {
 		offset = {
 			-- NOTE: omit `top`/`left` to center the floating window vertically/horizontally.
-			top = 0,
+			-- top = 0,
 			-- left = 0.17,
 			width = 150,
 			height = 0.85,
 		},
 		-- NOTE: check :help nvim_open_win() for possible border values.
-		border = "double",
-		-- border = "thicc", -- this is a preset, try it :)
+		-- border = "double",
+		border = "thicc", -- this is a preset, try it :)
 	},
 	presets = {
 		{

@@ -62,15 +62,15 @@ return packer.startup(function(use)
 
 	-- Visual
 	use({ "ellisonleao/gruvbox.nvim" }) -- colorscheme
-	use({ "sunjon/shade.nvim" }) -- shade non active windows
 	use({ "https://gitlab.com/yorickpeterse/nvim-window.git" }) -- easily select windows
 	use({ "nvim-lualine/lualine.nvim", commit = "a52f078026b27694d2290e34efa61a6e4a690621" }) -- status line at the bottom
-	use({
-		"nyngwang/NeoZoom.lua",
-		commit = "e1b004b7fc375505a4d081695d3b714b1894c9c1",
-		requires = { "nyngwang/NeoNoName.lua" },
-	}) -- zoom buffer to tab
-	-- use({ "nyngwang/NeoZoom.lua", commit = "1289b900bd478fd135dcc0faf4a43b3cf7524097" }) -- zoom buffer to tab
+	-- use({
+	-- 	"nyngwang/NeoZoom.lua",
+	-- 	commit = "e1b004b7fc375505a4d081695d3b714b1894c9c1",
+	-- 	requires = { "nyngwang/NeoNoName.lua" },
+	-- }) -- zoom buffer to tab
+	use({ "nyngwang/NeoZoom.lua", commit = "1289b900bd478fd135dcc0faf4a43b3cf7524097" }) -- zoom buffer to tab
+	-- use({ "sunjon/shade.nvim" }) -- shade non active windows
 	-- use { "akinsho/bufferline.nvim", commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4" }
 
 	-- Cmp - completions
