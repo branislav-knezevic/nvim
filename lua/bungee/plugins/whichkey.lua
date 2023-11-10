@@ -216,7 +216,7 @@ local mappings = {
 	},
 	["v"] = { "v$h", "Select till end" },
 	-- ["b"] = {},
-	["n"] = { "<Cmd>lua require'shade'.toggle()<CR>", "Toggle shade" },
+	-- ["n"] = { "<Cmd>lua require'shade'.toggle()<CR>", "Toggle shade" },
 	["m"] = {
 		"<cmd>lua require('telescope.builtin').git_status(require('telescope.themes').get_dropdown{layout_config={width=0.5}, previewer = false})<cr>",
 		"Edited files",
