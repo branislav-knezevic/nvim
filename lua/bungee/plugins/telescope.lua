@@ -26,7 +26,7 @@ vim.keymap.set("n", "<leader>B", builtin.buffers, {})
 vim.keymap.set("n", "<leader>ft", builtin.help_tags, {})
 
 require("telescope").load_extension("fzf")
--- require("telescope").load_extension("lazygit")
+require("telescope").load_extension("lazygit")
 
 telescope.setup({
 	defaults = {

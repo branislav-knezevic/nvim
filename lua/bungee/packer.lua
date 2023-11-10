@@ -50,6 +50,7 @@ return packer.startup(function(use)
 	use({ "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" }) -- file explorer
 	use({ "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" }) -- remove file form buffer but keep window
 	use({ "voldikss/vim-floaterm" }) -- terminal in Vim
+	-- use({ "akinsho/toggleterm.nvim", commit = "c80844fd52ba76f48fabf83e2b9f9b93273f418d" })
 	use({ "akinsho/toggleterm.nvim", commit = "2a787c426ef00cb3488c11b14f5dcf892bbd0bda" })
 	use({ "ahmedkhalf/project.nvim", commit = "628de7e433dd503e782831fe150bb750e56e55d6" }) -- jump to git projects from anywhere
 	use({ "lewis6991/impatient.nvim", commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6" }) -- spped up vim
@@ -57,17 +58,19 @@ return packer.startup(function(use)
 	use({ "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" }) -- neovim homepage
 	use({ "folke/which-key.nvim" }) -- helps wiht leader mappings
 	use({ "kylechui/nvim-surround", tag = "*" }) -- for easily surrouding
+	use({ "chentoast/marks.nvim" }) -- manage marks
+
+	-- Visual
+	use({ "ellisonleao/gruvbox.nvim" }) -- colorscheme
+	use({ "sunjon/shade.nvim" }) -- shade non active windows
+	use({ "https://gitlab.com/yorickpeterse/nvim-window.git" }) -- easily select windows
+	use({ "nvim-lualine/lualine.nvim", commit = "a52f078026b27694d2290e34efa61a6e4a690621" }) -- status line at the bottom
 	use({
 		"nyngwang/NeoZoom.lua",
 		commit = "e1b004b7fc375505a4d081695d3b714b1894c9c1",
 		requires = { "nyngwang/NeoNoName.lua" },
 	}) -- zoom buffer to tab
-
-	-- Visual
-	use({ "morhetz/gruvbox" }) -- colorscheme
-	use({ "sunjon/shade.nvim" }) -- shade non active windows
-	use({ "https://gitlab.com/yorickpeterse/nvim-window.git" }) -- easily select windows
-	use({ "nvim-lualine/lualine.nvim", commit = "a52f078026b27694d2290e34efa61a6e4a690621" }) -- status line at the bottom
+	-- use({ "nyngwang/NeoZoom.lua", commit = "1289b900bd478fd135dcc0faf4a43b3cf7524097" }) -- zoom buffer to tab
 	-- use { "akinsho/bufferline.nvim", commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4" }
 
 	-- Cmp - completions
