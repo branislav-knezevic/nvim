@@ -24,10 +24,10 @@ require("bungee.plugins.nvim-tree")
 require("bungee.plugins.nvim-window")
 require("bungee.plugins.pcl-neovim")
 require("bungee.plugins.project")
--- require("bungee.plugins.shade")
+-- require("bungee.plugins.shade") -- disabled as it colides with neo-zoom
 require("bungee.plugins.telescope")
 require("bungee.plugins.toggleterm")
 require("bungee.plugins.treesitter")
 require("bungee.plugins.vim-terraform")
 require("bungee.plugins.whichkey")
--- require("bungee.plugins.neo-zoom")
+-- require("bungee.plugins.neo-zoom") -- faulty config

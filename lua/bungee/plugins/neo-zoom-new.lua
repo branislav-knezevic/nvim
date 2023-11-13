@@ -21,11 +21,11 @@ neozoom.setup({
 			-- NOTE: omit `top`/`left` to center the floating window vertically/horizontally.
 			-- top = 0,
 			-- left = 0.17,
-			width = 150,
+			width = 0.85,
 			height = 0.85,
 		},
 		-- NOTE: check :help nvim_open_win() for possible border values.
-		border = "double",
+		-- border = "double",
 		-- border = "thicc", -- this is a preset, try it :)
 	},
 	presets = {
@@ -33,7 +33,7 @@ neozoom.setup({
 			-- NOTE: regex pattern can be used here!
 			filetypes = { "dapui_.*", "dap-repl" },
 			winopts = {
-				offset = { top = 0.02, left = 0.26, width = 0.74, height = 0.25 },
+				offset = { top = 0.02, left = 0.10, width = 0.74, height = 0.25 },
 			},
 		},
 		{
