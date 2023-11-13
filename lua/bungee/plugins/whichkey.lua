@@ -114,6 +114,7 @@ local mappings = {
 		S = { "<cmd>PackerStatus<cr>", "Status" },
 		u = { "<cmd>PackerUpdate<cr>", "Update" },
 	},
+	["P"] = { "<cmd>Telescope projects<CR>", "Find Projects" },
 	-- ["["] = { "<cmd>call append(line('.')-1, '')<CR>", "Add blank line above" },
 	-- ["]"] = { "<cmd>call append(line('.'), '')<CR>", "Add blank line below" },
 	["["] = { "<cmd>m .-2<CR>==", "Move line up" },
@@ -182,6 +183,7 @@ local mappings = {
 	["\\"] = { "<cmd>vsplit<CR>", "Vertical split" },
 	["-"] = { "<cmd>split<CR>", "Horizontal split" },
 	["z"] = { "<cmd>NeoZoomToggle<CR>", "Zoom Toggle" },
+	["Z"] = { "<cmd>tab split<CR>", "Zoom to Tab" },
 	["x"] = { "<cmd>x<CR>", "Save and close" },
 	c = {
 		name = "LSP",
