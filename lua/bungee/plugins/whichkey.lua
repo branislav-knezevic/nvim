@@ -135,7 +135,7 @@ local mappings = {
 		c = { "<cmd>Telescope commands<cr>", "Commands" },
 		g = { "<cmd>Telescope git_status<cr>", "Open changed file" },
 	},
-	-- ["d"]
+	["d"] = { "<cmd>ToggleTerm<CR>", "Show Terminal" },
 	["f"] = {
 		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{layout_config={width=0.5}, previewer = false})<cr>",
 		"Find files",
