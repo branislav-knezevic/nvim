@@ -1,10 +1,6 @@
-local cmp_status_ok, focus = pcall(require, "focus")
+local cmp_status_ok, focus = pcall(require, "focus") -- float term file managers
 if not cmp_status_ok then
-  return
+	return
 end
 
--- config = function() 
---   require("focus").setup() 
--- end 
-
-require("focus").setup({hybridnumber = true, excluded_filetypes = {"toggleterm"}})
+require("focus").setup({ hybridnumber = true, excluded_filetypes = { "toggleterm" } })

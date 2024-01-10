@@ -59,6 +59,7 @@ return packer.startup(function(use)
 	use({ "folke/which-key.nvim" }) -- helps wiht leader mappings
 	use({ "kylechui/nvim-surround", tag = "*" }) -- for easily surrouding
 	use({ "chentoast/marks.nvim" }) -- manage marks
+	use({ "is0n/fm-nvim" }) -- float term file managers
 
 	-- Visual
 	use({ "ellisonleao/gruvbox.nvim" }) -- colorscheme
