@@ -46,6 +46,3 @@ neozoom.setup({
 		},
 	},
 })
-vim.keymap.set("n", "<CR>", function()
-	vim.cmd("NeoZoomToggle")
-end, { silent = true, nowait = true })
