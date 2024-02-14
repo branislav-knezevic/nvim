@@ -89,7 +89,7 @@ return packer.startup(function(use)
 
 	-- Old Vim Stuff
 	use({ "kana/vim-textobj-user" }) -- needed for next three plugins
-	use({ "kana/vim-textobj-line" }) -- line as textobj
+	-- use({ "kana/vim-textobj-line" }) -- line as textobj
 	use({ "kana/vim-textobj-indent" }) -- indent as textobj
 	use({ "kana/vim-textobj-entire" }) -- whole file as textobj
 	use({ "tpope/vim-repeat" }) -- dot command to work with plugin commands
@@ -109,11 +109,17 @@ return packer.startup(function(use)
 	use({ "davidgranstrom/nvim-markdown-preview" })
 
 	-- Telescope
-	use({ "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" })
+	use({ "nvim-telescope/telescope.nvim" })
+	-- use({ "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" })
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", commit = "32d0baae44f5fd0416128c871fca6d9e27b60b3d" })
+	use({
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		after = "nvim-treesitter",
+		requires = "nvim-treesitter/nvim-treesitter",
+	}) -- text objects
 	use({ "p00f/nvim-ts-rainbow" }) -- brackets with different colors
 	use({ "ngalaiko/tree-sitter-go-template" }) -- for helm syntax
 
