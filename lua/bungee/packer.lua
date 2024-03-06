@@ -45,7 +45,7 @@ return packer.startup(function(use)
 	use({ "nvim-lua/plenary.nvim", commit = "4b7e52044bbb84242158d977a50c4cbcd85070c7" }) -- Useful lua functions used by lots of plugins
 	use({ "windwp/nvim-autopairs", commit = "4fc96c8f3df89b6d23e5092d31c866c53a346347" }) -- Autopairs, integrates with both cmp and treesitter
 	use({ "numToStr/Comment.nvim", commit = "97a188a98b5a3a6f9b1b850799ac078faa17ab67" }) -- easy commenting of code
-	use({ "JoosepAlviste/nvim-ts-context-commentstring", commit = "4d3a68c41a53add8804f471fcc49bb398fe8de08" }) -- commenting on steroids
+	-- use({ "JoosepAlviste/nvim-ts-context-commentstring", commit = "4d3a68c41a53add8804f471fcc49bb398fe8de08" }) -- commenting on steroids
 	use({ "kyazdani42/nvim-web-devicons", commit = "563f3635c2d8a7be7933b9e547f7c178ba0d4352" }) -- emoji icons
 	use({ "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" }) -- file explorer
 	use({ "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" }) -- remove file form buffer but keep window
@@ -54,7 +54,7 @@ return packer.startup(function(use)
 	use({ "akinsho/toggleterm.nvim", commit = "2a787c426ef00cb3488c11b14f5dcf892bbd0bda" })
 	use({ "ahmedkhalf/project.nvim", commit = "628de7e433dd503e782831fe150bb750e56e55d6" }) -- jump to git projects from anywhere
 	use({ "lewis6991/impatient.nvim", commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6" }) -- spped up vim
-	use({ "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" }) -- helps witn indenting
+	-- use({ "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" }) -- helps witn indenting
 	use({ "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" }) -- neovim homepage
 	use({ "folke/which-key.nvim" }) -- helps wiht leader mappings
 	use({ "kylechui/nvim-surround", tag = "*" }) -- for easily surrouding
@@ -113,7 +113,8 @@ return packer.startup(function(use)
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 
 	-- Treesitter
-	use({ "nvim-treesitter/nvim-treesitter", commit = "32d0baae44f5fd0416128c871fca6d9e27b60b3d" })
+	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+	-- use({ "nvim-treesitter/nvim-treesitter", commit = "c09932bd2de01dc9c01e870fe83060693c67de13" })
 	use({
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		after = "nvim-treesitter",
@@ -121,14 +122,14 @@ return packer.startup(function(use)
 	}) -- text objects
 	use({ "p00f/nvim-ts-rainbow" }) -- brackets with different colors
 	use({ "ngalaiko/tree-sitter-go-template" }) -- for helm syntax
+	-- Apple
+	-- use({ "https://github.pie.apple.com/pcl/pcl-neovim.git", after = "nvim-treesitter", run = ":TSInstall! pcl" }) --plugin for Apple's pcl files
+	-- use({ "https://github.com/apple/pkl-neovim.git", after = "nvim-treesitter", run = ":TSInstall! pkl" }) --plugin for Apple's pkl files
 
 	-- Git
 	use({ "tpope/vim-fugitive" }) -- old Vim plugin for Git
 	use({ "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" })
 	use({ "kdheepak/lazygit.nvim" }) -- lazygit
-
-	-- Apple
-	use({ "https://github.pie.apple.com/pcl/pcl-neovim.git", after = "nvim-treesitter", run = ":TSInstall! pcl" }) --pluging for Apple's pcl files
 
 	-- Noice
 	-- window like notifications
