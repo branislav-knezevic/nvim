@@ -17,10 +17,20 @@ parser_config.gotmpl = {
 -- event = { "BufReadPre", "BufNewFile" }
 
 configs.setup({
-	ensure_installed = "all", -- one of "all" or a list of languages
+	-- ensure_installed = "all", -- one of "all" or a list of languages
 	-- ensure_installed = "bash, dockerfile, json, yaml, diff, git_config, git_rebase, gitcommit, gitignore, go, groovy, hcl, java, javascript, ", -- one of "all" or a list of languages
-	-- ensure_installed = { "pkl" }, -- one of "all" or a list of languages
-	-- auto_install = true,
+	ensure_installed = {
+		"bash",
+		"dockerfile",
+		"groovy",
+		"hcl",
+		"json",
+		"pcl",
+		"pkl",
+		"terraform",
+		"yaml",
+	}, -- one of "all" or a list of languages
+	auto_install = true,
 
 	ignore_install = { "" }, -- List of parsers to ignore installing
 
