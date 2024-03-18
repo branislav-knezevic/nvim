@@ -17,16 +17,16 @@ parser_config.gotmpl = {
 -- event = { "BufReadPre", "BufNewFile" }
 
 configs.setup({
-	ensure_installed = "all", -- one of "all" or a list of languages
-	-- ensure_installed = "bash, dockerfile, json, yaml, diff, git_config, git_rebase, gitcommit, gitignore, go, groovy, hcl, java, javascript, ", -- one of "all" or a list of languages
+	-- ensure_installed = "all", -- one of "all" or a list of languages
+	ensure_installed = {}"bash, dockerfile, json, yaml, diff, git_config, git_rebase, gitcommit, gitignore, go, groovy, hcl, java, javascript, ", -- one of "all" or a list of languages
 	-- ensure_installed = { "pkl" }, -- one of "all" or a list of languages
-	-- auto_install = true,
+	auto_install = true,
 
 	ignore_install = { "" }, -- List of parsers to ignore installing
 
 	highlight = {
 		enable = true, -- false will disable the whole extension
-		disable = { "css" }, -- list of language that will be disabled
+		disable = {}, -- list of language that will be disabled
 		additional_vim_regex_highlighting = true,
 	},
 
@@ -46,7 +46,7 @@ configs.setup({
 
 	indent = {
 		enable = true,
-		disable = { "css" },
+		disable = {},
 	},
 
 	rainbow = {
