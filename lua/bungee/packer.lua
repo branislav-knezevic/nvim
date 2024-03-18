@@ -113,8 +113,13 @@ return packer.startup(function(use)
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 
 	-- Treesitter
-	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-	-- use({ "nvim-treesitter/nvim-treesitter", commit = "c09932bd2de01dc9c01e870fe83060693c67de13" })
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = function()
+			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+			ts_update()
+		end,
+	})
 	use({
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		after = "nvim-treesitter",
@@ -124,7 +129,11 @@ return packer.startup(function(use)
 	use({ "ngalaiko/tree-sitter-go-template" }) -- for helm syntax
 	-- Apple
 	-- use({ "https://github.pie.apple.com/pcl/pcl-neovim.git", after = "nvim-treesitter", run = ":TSInstall! pcl" }) --plugin for Apple's pcl files
-	-- use({ "https://github.com/apple/pkl-neovim.git", after = "nvim-treesitter", run = ":TSInstall! pkl" }) --plugin for Apple's pkl files
+	use({
+		"https://github.com/apple/pkl-neovim.git",
+		after = "nvim-treesitter",
+		run = ":TSInstall! pkl",
+	}) --plugin for Apple's pkl files
 
 	-- Git
 	use({ "tpope/vim-fugitive" }) -- old Vim plugin for Git

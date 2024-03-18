@@ -13,13 +13,18 @@ parser_config.gotmpl = {
 	used_by = { "gohtmltmpl", "gotexttmpl", "gotmpl", "yaml" },
 }
 
--- build = ":TSUpdate"
--- event = { "BufReadPre", "BufNewFile" }
-
 configs.setup({
 	-- ensure_installed = "all", -- one of "all" or a list of languages
-	ensure_installed = {}"bash, dockerfile, json, yaml, diff, git_config, git_rebase, gitcommit, gitignore, go, groovy, hcl, java, javascript, ", -- one of "all" or a list of languages
-	-- ensure_installed = { "pkl" }, -- one of "all" or a list of languages
+	ensure_installed = {
+		"bash",
+		"dockerfile",
+		"json",
+		"yaml",
+		"groovy",
+		"hcl",
+		"terraform",
+		"pkl",
+	},
 	auto_install = true,
 
 	ignore_install = { "" }, -- List of parsers to ignore installing
@@ -61,10 +66,7 @@ configs.setup({
 		select = {
 			enable = true,
 			-- Automatically jump forward to textobj, similar to targets.vim
-			disable = {
-				"pcl",
-				"pkl",
-			},
+			disable = {},
 			lookahead = true,
 			keymaps = {
 				-- You can use the capture groups defined in textobjects.scm
